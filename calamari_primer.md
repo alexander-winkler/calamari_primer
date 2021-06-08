@@ -15,6 +15,12 @@ Die von den Entwicklern angebotenen Standard-Modelle sind v.a. auf historischen 
 
 ### Line Snippets
 
+```
+calamari-predict \
+    --checkpoint "model.ckpt" \
+    --data.images "images_files_*.tif"
+```
+
 ### PageXML
 
 ```
@@ -92,5 +98,13 @@ calamari-predict-and-eval \
     --data.images "path/to/pageimages/*.bin.png \
     --skip_empty_gt True
 ```
+# Vermischte Hinweise
+
+## PageXML von Eynollah
+
+[Eynollah](https://github.com/qurator-spk/eynollah) produziert PageXML-Dateien mit dem Namespace `pc="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15"`, das *Calamari* derzeit nicht unterstützt.
+Um *Eynollah*-PageXML-Dateien zu verarbeiten, muss 
+, das *Calamari* derzeit nicht unterstützt.
+Um *Eynollah*-PageXML-Dateien zu verarbeiten, muss 
 
 [^1]: Zusammengestellt aus der [*Calamari*-Dokumentation](calamari-ocr.readthedocs.io), verschiedenen [github-Issues](https://github.com/Calamari-OCR/calamari/issues) und dem [Demo-Notebook](https://github.com/andbue/calamari_demo/blob/main/calamari_train.ipynb) von Andreas Büttner.
